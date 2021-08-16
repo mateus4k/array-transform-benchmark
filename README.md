@@ -32,3 +32,9 @@
 | _forOf + push_          | _428,001 ops/sec_ | ±1.58% | (85 runs sampled) |
 
 :tada: Fastest is _forOf + push_ :tada:
+
+## Usage
+
+```bash
+docker-compose up --build
+```
