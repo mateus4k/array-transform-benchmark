@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  nodejs:
+    container_name: test_nodejs
+    build:
+      context: .
+      dockerfile: Dockerfile
+    mem_limit: 512m
+    mem_reservation: 256M
+    cpus: 2
