@@ -31,4 +31,4 @@
 | _forEach + push_        | _339,256 ops/sec_ | ±1.24% | (89 runs sampled) |
 | _forOf + push_          | _428,001 ops/sec_ | ±1.58% | (85 runs sampled) |
 
-:tada: Fastest is _forof + push_ :tada:
+:tada: Fastest is _forOf + push_ :tada:
