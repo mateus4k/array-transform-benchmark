@@ -52,14 +52,14 @@ suite
       };
     }, []);
   })
-  .add('forof + delete', function () {
+  .add('forOf + delete', function () {
     const arr = init();
 
     for (const item of arr) {
       delete item.content;
     }
   })
-  .add('forof + push', function () {
+  .add('forOf + push', function () {
     const arr = init();
 
     const newArr = [];
