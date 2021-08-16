@@ -1,5 +1,23 @@
 # Array Transform Benchmark
 
+## Scenario
+
+- 50 arrays of objects
+- Object structure:
+
+```json
+{ "filename": "[number]-filename", "content": "[17Mb file]" }
+```
+
+- Test case: remove the `content` property from all items in the array
+
+## Environment:
+
+- node:8.4.0-alpine
+- mem_limit: 512m
+- mem_reservation: 256M
+- cpus: 2
+
 ## Result
 
 | Method                  | Ops/Sec           | %      | Runs              |
@@ -13,4 +31,4 @@
 | _forEach + push_        | _339,256 ops/sec_ | ±1.24% | (89 runs sampled) |
 | _forOf + push_          | _428,001 ops/sec_ | ±1.58% | (85 runs sampled) |
 
-:tada: Fastest is *forof + push* :tada:
+:tada: Fastest is _forof + push_ :tada:
