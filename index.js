@@ -88,6 +88,24 @@ suite
       delete item.filename;
     });
   })
+  .add('for + delete', function () {
+    const arr = init();
+
+    for (let i = 0; i < arr.length; i++) {
+      delete arr[i].content;
+    }
+  })
+  .add('for + push', function () {
+    const arr = init();
+
+    const newArr = [];
+
+    for (let i = 0; i < arr.length; i++) {
+      newArr.push({
+        filename: arr[i].filename,
+      });
+    }
+  })
   .on('cycle', function (event) {
     console.log(String(event.target));
   })
