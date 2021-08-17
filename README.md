@@ -1,15 +1,18 @@
 # Array Transform Benchmark
 
+Test case: remove the `content` property from all items in the array
+
 ## Scenario
 
 - 50 arrays of objects
 - Object structure:
 
 ```json
-{ "filename": "[number]-filename", "content": "[17Mb file]" }
+{
+  "filename": "[number]-filename",
+  "content": "[17Mb file]"
+}
 ```
-
-- Test case: remove the `content` property from all items in the array
 
 ## Environment:
 
@@ -19,6 +22,8 @@
 - cpus: 1
 
 ## Result
+
+Fastest is _for + push_ 🎉
 
 | Method                  | Ops/Sec | %      | Runs            |
 | ----------------------- | ------- | ------ | --------------- |
@@ -32,8 +37,6 @@
 | _reduce + content null_ | 62,028  | ±1.16% | 89 runs sampled |
 | _map + content null_    | 59,950  | ±1.49% | 84 runs sampled |
 | _forEach + delete_      | 57,452  | ±2.15% | 83 runs sampled |
-
-🎉 Fastest is _for + push_ 🎉
 
 ## Usage
 
