@@ -14,9 +14,9 @@
 ## Environment:
 
 - node:8.4.0-alpine
-- mem_limit: 512m
-- mem_reservation: 256M
-- cpus: 2
+- mem_limit: 256m
+- mem_reservation: 124M
+- cpus: 1
 
 ## Result
 
